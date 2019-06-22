@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 13, 2019 at 05:14 PM
+-- Generation Time: Jun 22, 2019 at 03:05 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   `unitprice` double NOT NULL,
   `quantity` int(20) NOT NULL,
   `image` varchar(50) NOT NULL,
+  `dateAdded` datetime DEFAULT NULL,
   PRIMARY KEY (`code`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -42,14 +43,17 @@ CREATE TABLE IF NOT EXISTS `items` (
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`code`, `name`, `unitprice`, `quantity`, `image`) VALUES
-('p001', 'Item1', 300, 2, 'images.jpg'),
-('p002', 'Item2', 250, 1, 'images.jpg'),
-('p003', 'Item3', 630, 5, 'images.jpg'),
-('p004', 'Item4', 840, 3, 'download.jpg'),
-('p005', 'Item5', 1000, 6, 'download.jpg'),
-('p006', 'Item6', 1560, 2, 'makeup-1-700x400.jpg'),
-('p007', 'Item7', 2990, 1, 'makeup-1-700x400.jpg');
+INSERT INTO `items` (`code`, `name`, `unitprice`, `quantity`, `image`, `dateAdded`) VALUES
+('p001', 'Item1', 700, 3, 'images.jpg', NULL),
+('p002', 'Item2', 340, 10, 'images.jpg', NULL),
+('p003', 'Item3', 680, 5, 'images.jpg', NULL),
+('p004', 'Item45', 840, 8, 'download.jpg', NULL),
+('p005', 'Item5', 1000, 6, 'download.jpg', NULL),
+('p006', 'Item6', 1580, 10, 'makeup-1-700x400.jpg', NULL),
+('p007', 'Item7', 690, 3, 'makeup-1-700x400.jpg', NULL),
+('p008', 'Item8', 1650, 5, 'download.jpg', NULL),
+('p009', 'Item9', 1300, 4, 'download.jpg', NULL),
+('p0010', 'Item10', 870, 9, 'images.jpg', '2019-06-22 20:26:35');
 
 -- --------------------------------------------------------
 
