@@ -20,10 +20,12 @@ if(isset($_POST['submit'])){
     $quantity = $_POST['quantity'];
     $image = $_FILES["image"]["name"];
     $tmpname = $_FILES["image"]["tmp_name"];
+    date_default_timezone_set('Asia/Colombo');
+    $dateAdded = date("Y-m-d H:i:s");
 
     if(move_uploaded_file($tmpname, "uploads/$image")){
         $con = mysqli_connect("localhost","root","","cleverpoppy");
-        $query = "insert into items (code,name,unitprice,quantity,image) values ('$code','$name','$price','$quantity','$image')";
+        $query = "insert into items (code,name,unitprice,quantity,image,dateAdded) values ('$code','$name','$price','$quantity','$image','$dateAdded')";
 
         $result = mysqli_query($con, $query);
 
