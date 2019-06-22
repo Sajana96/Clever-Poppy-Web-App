@@ -18,6 +18,7 @@ if(!isset($_SESSION['name'])){
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
 </head>
 
 <body class="bgimage">
@@ -32,11 +33,13 @@ if(!isset($_SESSION['name'])){
 
     <span style="font-size:40px;cursor:pointer;color: aliceblue" onclick="openNav()">&#9776; Menu</span><br><br>
     <h5 class="text-light" >User: <?php echo $_SESSION['name'];?></h5><br>
-    <a href="logout.php" class="btn btn-danger">Logout</a>
+    <a href="logout.php" class="btn btn-danger" id="logout" onclick="logOutConfirm()">Logout</a>
 
 
 
 
 </body>
+<script src="js/validation.js"></script>
+
 
 </html>

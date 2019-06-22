@@ -39,7 +39,7 @@ if(!isset($_SESSION['name'])){
 
         <span style="font-size:40px;cursor:pointer;color: aliceblue" onclick="openNav()">&#9776; Menu </span><br><br>
         <h5 class="text-light" >User: <?php echo $_SESSION['name'];?></h5><br>
-    <a href="logout.php" class="btn btn-danger">Logout</a>
+    <a href="logout.php" class="btn btn-danger" id="logout" onclick="logOutConfirm()">Logout</a>
 
     </div>
     <center>
@@ -84,5 +84,6 @@ if(!isset($_SESSION['name'])){
 </body>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/validation.js"></script>
 
 </html>

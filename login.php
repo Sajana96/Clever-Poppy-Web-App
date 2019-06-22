@@ -58,7 +58,7 @@ if (isset($_POST['submit'])){
                     </div>
                     <div class="form-group">
                         <button name="submit" onclick="return validation(frmlogin)"
-                            class="btn-danger btn-block">Login</button>
+                            class="btn-danger btn-block" id="logout" onclick="logOutConfirm()">Login</button>
                     </div>
                     <h5 class="text-danger text-center" id="error"><?php echo $msg; ?></h5>
 

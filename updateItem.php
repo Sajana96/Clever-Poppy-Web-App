@@ -114,7 +114,7 @@ if(isset($_GET['icode'])){
         <span style="font-size:40px;cursor:pointer;color: aliceblue" onclick="openNav()">&#9776; Menu </span><br><br>
         
         <h5 class="text-light" >User: <?php echo $_SESSION['name'];?></h5><br>
-    <a href="logout.php" class="btn btn-danger">Logout</a>
+    <a href="logout.php" class="btn btn-danger" id="logout" onclick="logOutConfirm()">Logout</a>
 
     </div>
 

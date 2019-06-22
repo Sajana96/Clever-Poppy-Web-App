@@ -1,3 +1,6 @@
+
+
+
 function validation(form) {
     if (form.username.value.length == 0 || form.password.value.length == 0) {
         document.getElementById("error").innerHTML = "Please fill out the fields";
@@ -28,6 +31,14 @@ function additemValidation(form) {
 
 }
 
+function logOutConfirm() {
+    if (confirm("Are you sure you want to logout?")) {
+        document.getElementById("logout").href = "logout.php";
+    } else {
+        document.getElementById("logout").href = "#";
+    }
+
+}
 
 
 
