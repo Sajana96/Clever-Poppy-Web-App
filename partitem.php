@@ -5,7 +5,7 @@ if(!isset($_SESSION['name'])){
   
 }
 $msg="";
-$x=0;
+
 ?>
 
 
